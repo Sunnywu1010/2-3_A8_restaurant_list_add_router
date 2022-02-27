@@ -16,9 +16,9 @@
 ![GITHUB](https://github.com/Sunnywu1010/2-3_A1_restaurant_list_project_init/blob/main/ref_pic/%E6%90%9C%E5%B0%8B%E5%8A%9F%E8%83%BD1.jpg "搜尋功能")
 
 ## Feature - 產品功能
-使用者可以點擊任一餐廳，查看更多餐廳資訊，如地址、電話與簡介
-使用者可以依照中文名稱、英文名稱與餐廳類別進行搜尋
-使用者可以瀏覽全部所有餐廳
+使用者可以點擊任一餐廳，查看更多餐廳資訊，如地址、電話與簡介<br/>
+使用者可以依照中文名稱、英文名稱與餐廳類別進行搜尋<br/>
+使用者可以瀏覽全部所有餐廳<br/>
 
 ## Environment SetUp - 環境建置
 Node.js
