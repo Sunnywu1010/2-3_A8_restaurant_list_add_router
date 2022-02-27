@@ -3,17 +3,17 @@
 
 
 ## 專案首頁
-![GITHUB](https://github.com/Sunnywu1010/resraurant_list/blob/main/ref_pic/%E9%A6%96%E9%A0%811.jpg "首頁1")
-![GITHUB](https://github.com/Sunnywu1010/resraurant_list/blob/main/ref_pic/%E9%A6%96%E9%A0%812.jpg "首頁2")
+![GITHUB](https://github.com/Sunnywu1010/2-3_A1_restaurant_list_project_init/blob/main/ref_pic/%E9%A6%96%E9%A0%811.jpg "首頁1")
+![GITHUB](https://github.com/Sunnywu1010/2-3_A1_restaurant_list_project_init/blob/main/ref_pic/%E9%A6%96%E9%A0%812.jpg "首頁2")
 
 ## 檢視餐廳詳細資訊
-![GITHUB](https://github.com/Sunnywu1010/resraurant_list/blob/main/ref_pic/%E9%A4%90%E5%BB%B3%E4%BB%8B%E7%B4%B9.jpg "餐廳介紹")
+![GITHUB](https://github.com/Sunnywu1010/2-3_A1_restaurant_list_project_init/blob/main/ref_pic/%E9%A4%90%E5%BB%B3%E4%BB%8B%E7%B4%B9.jpg "餐廳介紹")
 
 ## 依餐廳名稱搜尋
-![GITHUB](https://github.com/Sunnywu1010/resraurant_list/blob/main/ref_pic/%E6%90%9C%E5%B0%8B%E5%8A%9F%E8%83%BD2.jpg "搜尋功能2")
+![GITHUB](https://github.com/Sunnywu1010/2-3_A1_restaurant_list_project_init/blob/main/ref_pic/%E6%90%9C%E5%B0%8B%E5%8A%9F%E8%83%BD2.jpg "搜尋功能2")
 
 ## 依餐廳類別搜尋
-![GITHUB](https://github.com/Sunnywu1010/resraurant_list/blob/main/ref_pic/%E6%90%9C%E5%B0%8B%E5%8A%9F%E8%83%BD1.jpg "搜尋功能")
+![GITHUB](https://github.com/Sunnywu1010/2-3_A1_restaurant_list_project_init/blob/main/ref_pic/%E6%90%9C%E5%B0%8B%E5%8A%9F%E8%83%BD1.jpg "搜尋功能")
 
 ## Feature - 產品功能
 使用者可以點擊任一餐廳，查看更多餐廳資訊，如地址、電話與簡介
