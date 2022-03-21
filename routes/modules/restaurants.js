@@ -1,15 +1,16 @@
-const express=require("express")
-const router=express.Router()
+const express = require("express");
+const router = express.Router();
 const restaurantList = require("../../models/restaurants");
 
 // params
-router.get("/restaurants/:restaurants_id", (req, res) => {
+router.get("/:restaurants_id", (req, res) => {
   const restaurantId = req.params.restaurants_id;
-  const restaurant = restaurantList.find(
-    (restaurant) => restaurant.id.toString() === restaurantId
-  );
-  res.render("show", { restaurant });
+  restaurantList
+    .findById(restaurantId)
+    .lean()
+    .then((restaurant) => {
+      res.render("show", { restaurant });
+    })
+    .catch((error) => console.log(error));
 });
-module.exports=router
-
-
+module.exports = router;
