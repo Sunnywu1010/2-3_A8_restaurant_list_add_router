@@ -83,13 +83,16 @@
             <div class="card-footer">
               <a
                 href="/restaurants/{{this._id}}"
-                class="text-secondary btn btn-primary"
+                class="text-secondary btn btn-primary "
               >Detail
               </a>
               <a
                 href="/restaurants/{{this._id}}/edit"
-                class="text-secondary btn btn-outline-secondary"
+                class="text-secondary btn btn-outline-secondary "
               >Edit</a>
+              <form action="/restaurants/{{this._id}}/delete" class="d-inline" method="POST"><button
+                  class="text-secondary btn btn-outline-warning  "
+                >Delete</button></form>
             </div>
           </div>
         {{/each}}

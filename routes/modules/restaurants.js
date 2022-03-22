@@ -17,6 +17,17 @@ router.get("/:restaurants_id/edit", (req, res) => {
     })
     .catch((error) => console.log(error));
 });
+// delete
+router.post("/:restaurants_id/delete", (req, res) => {
+  const restaurantId = req.params.restaurants_id;
+  restaurantList
+    .findById(restaurantId)
+    .then((restaurant) => {
+      restaurant.remove();
+    })
+    .then(() => res.redirect("/"))
+    .catch((error) => console.log(error));
+});
 // save edit change
 router.post("/:restaurants_id/edit", (req, res) => {
   const restaurantId = req.params.restaurants_id;

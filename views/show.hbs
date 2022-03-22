@@ -10,7 +10,7 @@
           class="d-inline-block align-top"
           alt="好。吃"
         />
-         My Restaurant List
+        My Restaurant List
       </a>
     </div>
   </nav>
@@ -36,7 +36,7 @@
           <i class="fas fa-map-marker-alt pr-2"></i>
           Address：
         </span>
-         {{restaurant.location}}
+        {{restaurant.location}}
         <a
           href="https://goo.gl/maps/V9mKwVJ4s5v"
           class="text-secondary"
@@ -65,5 +65,23 @@
         style="max-width: 600px;"
       />
     </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <form action="/restaurants/{{restaurant._id}}/edit">
+      <button class="btn btn-primary col-auto m-1">Edit</button>
+    </form>
+    <a href="/"><button
+        type="button"
+        class="btn btn-outline-secondary col-auto m-1"
+      >Home</button>
+    </a>
+    <form
+      action="/restaurants/{{restaurant._id}}/delete"
+      method="POST"
+    ><button
+        class=" btn btn-outline-warning col-auto m-1"
+      >Delete</button></form>
   </div>
 </div>
