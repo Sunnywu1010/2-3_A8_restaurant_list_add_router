@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const restaurantList = require("../../models/restaurants");
 
+
 // search
 router.get("/search", (req, res) => {
   const keyword = req.query.keyword;
@@ -18,7 +19,6 @@ router.get("/search", (req, res) => {
     })
     
   });
-
     
 router.get("/", (req, res) => {
   restaurantList

@@ -3,7 +3,6 @@ const exphbs = require("express-handlebars");
 const app = express();
 const bodyParser = require("body-parser");
 const port = 3000;
-const restaurantList = require("./restaurant.json").results;
 const routes = require("./routes");
 require("./config/mongoose");
 
