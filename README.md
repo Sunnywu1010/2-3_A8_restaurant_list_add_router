@@ -7,6 +7,7 @@ This is where you can build your restaurant list, please feel free to use it.
 1. Have a look into all the restaurant you have.
 2. Search the specific restaurant you want.
 3. See more details to each restaurant that on the list.
+4. Create, edit, delete your restaurant list.
 4. Run locally.
 
 ## Environment SetUp
@@ -23,6 +24,11 @@ Please install the Development Tools mentioned below
 
 ```
 npm install
+```
+Please run the restaurantSeeder by
+
+```
+npm run seeder
 ```
 
 Please run the server by
@@ -45,5 +51,7 @@ ctrl + c
 
 ## Development Tools
 
-1. Express 4.17.3
+1. Express 4.16.4
 2. Express-Handlebars 3.0.0
+3. Body-parser 1.19.2
+4. Mongoose 5.13.14
