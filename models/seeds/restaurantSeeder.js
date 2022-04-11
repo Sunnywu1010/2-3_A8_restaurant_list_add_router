@@ -1,20 +1,24 @@
-const db=require("../../config/mongoose")
-const restaurants=require("../../restaurant.json").results
-const RestaurantList=require("../restaurants")
-db.once("open",()=>{
-  for(let i=0;i<restaurants.length;i++){
-    RestaurantList.create({
-      name: restaurants[i].name,
-      name_en: restaurants[i].name_en,
-      category: restaurants[i].category,
-      image:restaurants[i].image,
-      location: restaurants[i].location,
-      phone: restaurants[i].phone,
-      google_map: restaurants[i].google_map,
-      rating: restaurants[i].rating,
-      description:restaurants[i].description
-    });
-
-  }
-console.log("restaurant seeder done.")
-})
+const db = require("../../config/mongoose");
+const restaurants = require("../../restaurant.json").results;
+const RestaurantList = require("../restaurants");
+db.once("open", () => {
+  Promise.all(
+    Array.from(restaurants, (restaurant) => {
+      return RestaurantList.create({
+        name: restaurant.name,
+        name_en: restaurant.name_en,
+        category: restaurant.category,
+        image: restaurant.image,
+        location: restaurant.location,
+        phone: restaurant.phone,
+        google_map: restaurant.google_map,
+        rating: restaurant.rating,
+        description: restaurant.description,
+      });
+    })
+  ).then(() => {
+    console.log("restaurant create done.");
+    process.exit();
+  });
+});
+module.exports = db;

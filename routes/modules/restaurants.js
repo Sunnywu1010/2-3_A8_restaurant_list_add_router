@@ -18,7 +18,7 @@ router.get("/:restaurants_id/edit", (req, res) => {
     .catch((error) => console.log(error));
 });
 // delete
-router.post("/:restaurants_id/delete", (req, res) => {
+router.delete("/:restaurants_id", (req, res) => {
   const restaurantId = req.params.restaurants_id;
   restaurantList
     .findById(restaurantId)
@@ -29,7 +29,7 @@ router.post("/:restaurants_id/delete", (req, res) => {
     .catch((error) => console.log(error));
 });
 // save edit change
-router.post("/:restaurants_id/edit", (req, res) => {
+router.put("/:restaurants_id", (req, res) => {
   const restaurantId = req.params.restaurants_id;
   const {
     name,

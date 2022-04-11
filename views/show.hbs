@@ -69,7 +69,7 @@
 </div>
 <div class="container">
   <div class="row justify-content-center">
-    <form action="/restaurants/{{restaurant._id}}/edit">
+    <form action="/restaurants/{{restaurant._id}}?_method=PUT">
       <button class="btn btn-primary col-auto m-1">Edit</button>
     </form>
     <a href="/"><button
@@ -78,7 +78,7 @@
       >Home</button>
     </a>
     <form
-      action="/restaurants/{{restaurant._id}}/delete"
+      action="/restaurants/{{restaurant._id}}?_method=DELETE "
       method="POST"
     ><button
         class=" btn btn-outline-warning col-auto m-1"

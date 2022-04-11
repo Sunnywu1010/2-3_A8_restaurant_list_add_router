@@ -12,6 +12,13 @@
         />
         My Restaurant List
       </a>
+      <!-- restaurant Create -->
+      <div class="mt-3">
+
+        <a href="/restaurants/new" class="btn btn-primary mx-auto">
+          Create</a>
+      </div>
+
     </div>
   </nav>
 
@@ -20,36 +27,60 @@
 
 <!-- search bar -->
 <div class="container search-bar">
-  <div class="search-bar-outer">
-    <div class="search-bar-inner">
-      <form action="/search">
-        <h4 class="mb-2">Search Restaurant：</h4>
-        <div class="input-group">
-          <input
-            type="text"
-            name="keyword"
-            class="form-control"
-            placeholder="Restaurant Name or Category ..."
-            aria-label="Restaurant Name..."
-            aria-describedby="search-button"
-            value="{{keyword}}"
-          />
-          <div class="input-group-append">
-            <button class="btn btn-major" type="submit" id="search-button"><i
-                class="fas fa-search"
-              ></i></button>
+  <div class="row justify-content-center">
+
+    <div class="col-8 search-bar-outer">
+      <div class="search-bar-inner">
+        <form action="/search">
+          <h4 class="mb-2">Search Restaurant：</h4>
+          <div class="input-group">
+            <input
+              type="text"
+              name="keyword"
+              class="form-control"
+              placeholder="Restaurant Name or Category ..."
+              aria-label="Restaurant Name..."
+              aria-describedby="search-button"
+              value="{{keyword}}"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-major" type="submit" id="search-button"><i
+                  class="fas fa-search"
+                ></i></button>
+            </div>
           </div>
-        </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-2 input-group-lg mt-4">
+      <form action="/sort">
+        <select
+          class="input-group py-2 px-1"
+          name="sort"
+          id="sort-selector"
+          onchange="submit()"
+        >
+          <option>
+            {{#if property}}
+                {{property}}
+            {{else}}
+              Sort
+            {{/if}}
+          </option>
+          <option class="input-group-list" value="name_asc">A→Z</option>
+          <option class="input-group-list" value="name_desc">Z→A</option>
+          <option
+            class="input-group-list"
+            value="category_asc"
+          >category</option>
+          <option
+            class="input-group-list"
+            value="location_asc"
+          >location</option>
+
+        </select>
       </form>
     </div>
-  </div>
-</div>
-<!-- restaurant Create -->
-<div class="container mt-3">
-  <div class="row">
-
-    <a href="/restaurants/new" class="btn btn-primary col-7 mx-auto">Start to
-      Create Your Restaurant!</a>
   </div>
 </div>
 
@@ -60,16 +91,13 @@
       <div class="card-columns">
         {{#each restaurants}}
           <div class="card mb-3">
-            <a
-                href="/restaurants/{{this._id}}"
-                
-              >
-            <img
-              class="card-img-top"
-              src="{{this.image}}"
-              alt="{{this.name}}"
-            />
-              </a>
+            <a href="/restaurants/{{this._id}}">
+              <img
+                class="card-img-top"
+                src="{{this.image}}"
+                alt="{{this.name}}"
+              />
+            </a>
             <div class="card-body p-3">
               <h6 class="card-title mb-1">{{this.name}}</h6>
 
@@ -88,18 +116,23 @@
             <div class="card-footer">
               <a
                 href="/restaurants/{{this._id}}"
-                class="text-secondary btn btn-primary "
+                class="text-secondary btn btn-primary"
               >Detail
               </a>
               <a
                 href="/restaurants/{{this._id}}/edit"
-                class="text-secondary btn btn-outline-secondary "
+                class="text-secondary btn btn-outline-secondary"
               >Edit</a>
-              <form action="/restaurants/{{this._id}}/delete" class="d-inline" method="POST"><button
-                  class="text-secondary btn btn-outline-warning  "
+              <form
+                action="/restaurants/{{this._id}}?_method=PUT"
+                class="d-inline"
+                method="POST"
+              ><button
+                  class="text-secondary btn btn-outline-warning"
                 >Delete</button></form>
             </div>
           </div>
+
         {{/each}}
 
       </div>
